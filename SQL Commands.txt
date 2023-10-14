@@ -1,0 +1,63 @@
+SQL Commands
+
+mysql -u root -p
+show database
+create database <name>
+use <database name>
+show tables
+create table Programmers(Name varchar(0),DOB Date,DOJ DATE,SEX VARCHAR(1),PROF1 varchar(1),PROF1 VARCHAR(8),PROF2 VARCHAR(8),SALARY INT(4));
+describe table <tablename>//Programmers;
+INSERT INTO Programmers values('Anand','1966-04-10','2000-06-20','M','Pascal','Basic',50000);
+INSERT INTO Programmers values('Vijaya','1965-12-14','1992-05-02','F','foxpro','C',3500);
+INSERT INTO Programmers values('Revathi','1969-12-02','1992-05-02','F','Pascal','Basic',3700);
+INSERT INTO Programmers values('Remitha','1970-04-19','1993-01-02','F','C','Assembly',3600);
+INSERT INTO Programmers values('Rebecca','1967-01-01','1990-12-01','F','Basic','Cobol',2500);
+INSERT INTO Programmers values('Ramesh','1967-05-03','1991-02-28','M','Pascal','Dbase',3200);
+INSERT INTO Programmers values('Qadir','1965-08-31','1993-04-21','M','Assembly','C',3000);
+INSERT INTO Programmers values('Partrick','1965-11-19','1990-12-21','M','Pascal','Clipper',2800);
+INSERT INTO Programmers values('Nelson','1965-09-11','1989-10-11','M','Cobol','Dbase',2500);
+INSERT INTO Programmers values('Mary','1970-06-24','1991-02-01','F','C++','Oracle',4500);
+INSERT INTO Programmers values('Kamala','1968-01-30','1992-01-02','F','C','Dbase',2900);
+INSERT INTO Programmers values('Juliana','1968-01-31','1990-04-21','F','Cobol','Dbase',2900);
+INSERT INTO Programmers values('Jagadesh','1970-10-06','1994-10-04','M','Oracle','Java',4100);
+INSERT INTO Programmers values('Altaf','1964-07-02','1990-11-13','M','Clipper','Cobol',2800);
+
+INSERT INTO Studies values('Anand','SDBT','Pgdca',4500);
+INSERT INTO Studies values('Altaf','SSIL','Dca',7200);
+INSERT INTO Studies values('Jagadesh','SSIL','Dca',3500);
+INSERT INTO Studies values('Juliana','BITS','Dca',22000);
+INSERT INTO Studies values('Kamala','SAKTHIDBTECH','Dcp',5000);
+INSERT INTO Studies values('Mary','SDBT','Pgdca',4500);
+
+INSERT INTO Studies values('Nelson','SAKTHIDBTECH','Dap',6200);
+INSERT INTO Studies values('Partick','SAKTHIDBTECH','Dcap',5200);
+INSERT INTO Studies values('Qadir','APPLE','Hdcp',14000);
+INSERT INTO Studies values('Ramesh','SDBT','Pgdca',4500);
+INSERT INTO Studies values('Rebecca','SSS','Dca&p',11000);
+INSERT INTO Studies values('Remitha','Microsoft','Dcs',6000);
+INSERT INTO Studies values('Revathi','SDBT','Dap',5000);
+INSERT INTO Studies values('Vijaya','Microsoft','Dca',48000);
+
+SELECT NAME, FLOOR(DATEDIFF(CURDATE(), DOB) / 365) AS age FROM programmers;
+
+SELECT NAME FROM programmers WHERE NAME LIKE '%H';
+
+INSERT INTO software VALUES("ANAND","PARASHUTES","BASIC",399.95,6000,43);
+INSERT INTO software VALUES("ANAND","VIDEO THINKING PACK","PASCAL",7500.00,16000,9);
+INSERT INTO software VALUES("JAGADESH","SERIAL LINK UTILITY","JAVA",800.00,7500,10);
+INSERT INTO software VALUES("JAGADESH","SHARES MANAGEMENT","ORACLE",3000.00,12000,14);
+INSERT INTO software VALUES("JULIANA","INVENTORY CONTROL","COBOL",3000.00,3500,0);
+INSERT INTO software VALUES("KAMALA","PARCEL PACKAGE","DBASE",9000.00,20000,7);
+INSERT INTO software VALUES("MARY","FINANCIAL ACC S/W","ORACLE",18000.00,85000,4);
+INSERT INTO software VALUES("MARY","CODE GENERATOR","C",4500.00,20000,23);
+INSERT INTO software VALUES("MARY","READ ME","C++",300.00,1200,84);
+INSERT INTO software VALUES("PATRICK","GRAPHIC EDITOR","PASCAL",750.00,5000,11);
+INSERT INTO software VALUES("QADIR","BOMBS AWAY","ASSEMBLY",499.95,530,114);
+INSERT INTO software VALUES("QADIR","VACCINES","C",1900.00,3400,21);
+INSERT INTO software VALUES("RAMESH","HOTEL MANAGEMENT","DBASE",12000.00,35000,4);
+INSERT INTO software VALUES("RAMESH","DEAD LEE","PASCAL",99.95,4500,73);
+INSERT INTO software VALUES("REMITTA","PC UTILITIES","C",725.00,5000,51);
+INSERT INTO software VALUES("REMITTA","TSR HELP PACKAGE","ASSEMBLY",2500.00,900,6);
+INSERT INTO software VALUES("REVATHI","HOSPITAL MANAGEMENT","PASCAL",1100.00,75000,2);
+INSERT INTO software VALUES("REVATHI","QUIZ MASTER","BASIC",3200.00,2100,15);
+INSERT INTO software VALUES("VIJAYA","ISK EDITOR","C",900.00,700,6);
